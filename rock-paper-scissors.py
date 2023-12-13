@@ -8,15 +8,51 @@ elif decider == 2:
 elif decider == 3:
     computer_go = 'scissors'
 
+print("Welcome to Rock Paper Scissors Terminal-Game")
+print("You will battle against the notorious computer")
+print("The first one to win 5 battles is Victorious.")
 
 
 while True:
-    player_go = input("Pick 'rock', paper' or 'scissors'")
+    player_go = input("Pick your weapon! \nRock \nPaper \nScissors")
+    player_go.lower()
     if player_go == 'rock' or player_go == 'paper' or player_go == 'scissors':
         break
     else:
         print('pick an option')
-print("The computer picked {}".format(computer_go))
+print("Rock! Paper! Scissors! Shoot!")
 print("You picked {}".format(player_go))
+print("The computer picked {}".format(computer_go))
+
+player_score = 0
+computer_score = 0
+
+if player_go == "rock" and computer_go == "scissors":
+    player_score += 1 
+    print("You get a point! :)" )
+elif player_go == "scissors" and computer_go == "paper":
+    player_score += 1 
+    print("You get a point! :)")
+elif player_go == "paper" and computer_go == "rock":
+    player_score += 1 
+    print("You get a point! :)")
+
+if player_go == "rock" and computer_go == "rock":
+    print("Its a draw! Nobody gets a point")
+elif player_go == "scissors" and computer_go == "scissors":
+    print("Its a draw! Nobody gets a point")
+elif player_go == "paper" and computer_go == "paper":
+    print("Its a draw! Nobody gets a point")
+
+
+if player_go == "rock" and computer_go == "paper":
+    computer_score += 1 
+    print("Computer gains a point! :(")
+elif player_go == "scissors" and computer_go == "rock":
+    computer_score += 1 
+    print("Computer gains a point! :(")
+elif player_go == "paper" and computer_go == "scissors":
+    computer_score+= 1 
+    print("Computer gains a point! :(")
 
 
